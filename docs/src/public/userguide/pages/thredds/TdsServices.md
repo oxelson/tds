@@ -39,138 +39,44 @@ You can still define your own services, either globally in the root catalog, or 
 * Services placed in any other catalog are local, are used only in that catalog, and override (by name) any global services.
 
 
-## Server Information Services
-<table width="95%" border="2">
-  <tbody><tr>
-    <th width="15">Name</th>
-    <th width="50%">TDS Configuration</th>
-    <th width="35%">Description</th>
-  </tr>
-  <tr>
-    <td>Server Information (HTML)</td>
-    <td>
-      <table width="100%">
-        <tbody><tr>
-          <th colspan="2">Basic Configuration</th>
-        </tr>
-        <tr>
-          <td>Default&nbsp;Availability</td>
-          <td>Enabled</td>
-        </tr>
-        <tr>
-          <td>Access Point</td>
-          <td><code>/thredds/serverInfo.html</code></td>
-        </tr>
-      </tbody></table>
-    </td>
-    <td rowspan="3">
-      Provide human and machine readable access to information about the server
-      installation. E.g., an abstract and a list of keywords summarizing the
-      services and data available on the server, contact information and other
-      information about the group hosting the server, and the version of the
-      THREDDS Data Server (TDS) running.
-    </td>
-  </tr>
-  <tr>
-    <td>Server Information (XML)</td>
-    <td>
-      <table width="100%">
-        <tbody><tr>
-          <th colspan="2">Basic Configuration</th>
-        </tr>
-        <tr>
-          <td>Default&nbsp;Availability</td>
-          <td>Enabled</td>
-        </tr>
-        <tr>
-          <td>Access Point</td>
-          <td><code>/thredds/serverInfo.xml</code></td>
-        </tr>
-      </tbody></table>
-    </td>
-  </tr>
-  <tr>
-    <td>Server Version Information (Text)</td>
-    <td>
-      <table width="100%">
-        <tbody><tr>
-          <th colspan="2">Basic Configuration</th>
-        </tr>
-        <tr>
-          <td>Default&nbsp;Availability</td>
-          <td>Enabled</td>
-        </tr>
-        <tr>
-          <td>Access Point</td>
-          <td><code>/thredds/serverVersion.txt</code></td>
-        </tr>
-      </tbody></table>
-    </td>
-  </tr>
-</tbody></table>
+### Server Information Services
 
-<h3><a name="catalogServices">Catalog Services</a></h3>
-<table width="95%" border="2">
-  <tbody><tr>
-    <th width="15">Name</th>
-    <th width="50%">TDS Configuration</th>
-    <th width="35%">Description</th>
-  </tr>
-  <tr>
-    <td>THREDDS&nbsp;Catalog Services</td>
-    <td>
-      <table width="100%">
-        <tbody><tr>
-          <th colspan="2">Basic Configuration</th>
-        </tr>
-        <tr>
-          <td>Default&nbsp;Availability</td>
-          <td>Enabled</td>
-        </tr>
-        <tr>
-          <td>Access Point</td>
-          <td>
-            <code>/thredds/catalog.{xml|html}</code><br>
-            <code>/thredds/catalog/*/catalog.{xml|html}</code><br>
-            <code>/thredds/*/*.{xml|html}</code>
-          </td>
-        </tr>
-      </tbody></table>
-    </td>
-    <td rowspan="2">
-      Provide subsetting and HTML conversion services for THREDDS catalogs. Catalogs
-      served by the TDS can be subset and/or viewed as HTML. Remote catalogs, if allowed/enabled,
-      can be validated, displayed as HTML, or subset.
-      <ul>
-        <li>More details are available <a href="config_catalog.html">here</a>.
-        </li>
-        <li>Services for remote catalogs can be enabled with the TDS Configuration
-          File (<a href="basic_tds_configuration.html">threddsConfig.xml</a>).
-        </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Remote THREDDS Catalog Service</td>
-    <td>
-      <table width="100%">
-        <tbody><tr>
-          <th colspan="2">Basic Configuration</th>
-        </tr>
-        <tr>
-          <td>Default&nbsp;Availability</td>
-          <td>Disabled</td>
-        </tr>
-        <tr>
-          <td>Access&nbsp;Point</td>
-          <td><code>/thredds/remoteCatalogService</code></td>
-        </tr>
-      </tbody></table>
-    </td>
-  </tr>
-</tbody></table>
+Provide human and machine readable access to information about the server installation. E.g., an abstract and a list of keywords summarizing the services and data available on the server, contact information and other  information about the group hosting the server, and the version of the THREDDS Data Server (TDS) running.
+ 
+{:.services} 
+|-----------------|----------------------|-----------------------------|
+| Name            | Default Availability | Access Point                |
+|:----------------|:---------------------|:----------------------------|
+| HTML        | `enabled`            | `/thredds/serverInfo.html`  | 
+| XML         | `enabled`            | `/thredds/serverInfo.xml`   | 
+| text        | `enabled`            | `/thredds/serverVersion.txt`| 
 
-<h3><a name="metadataServices">Metadata Services</a></h3>
+
+### THREDDS Catalog Services
+
+Provide subsetting and HTML conversion services for THREDDS catalogs. Catalogs served by the TDS can be subset and/or viewed as HTML. Remote catalogs, if allowed/enabled, can be validated, displayed as HTML, or subset.
+
+{:.services} 
+|-----------------|----------------------|-----------------------------|
+| Name            | Default Availability | Access Point                |
+|:----------------|:---------------------|:----------------------------|
+| [Local](config_catalog.html)           | `enabled`           | `/thredds/catalog.{xml|html}`<br/>`/thredds/catalog/*/catalog.{xml|html}`<br/>`/thredds/*/*.{xml|html}`  | 
+| [Remote](basic_tds_configuration.html)       | `disabled`          | `/thredds/remoteCatalogService`   | 
+
+
+
+
+
+### Metadata Services
+
+{:.servicesConfig} 
+|-----------------|----------------------|-----------------------------|----------------------|-----------------------------|
+| Name            | Default Availability | Access Point                | Service Type | Service Base URL                |
+|:----------------|:---------------------|:----------------------------|:---------------------|:----------------------------|
+| <a name="ISO"></a> [ISO](https://www.ngdc.noaa.gov/wiki/index.php/NcISO){:target="_blank"} <br/> Provide ISO 19115 metadata representation of a dataset's structure and metadata| `enabled`            | `/thredds/iso/*`  |  `ISO` | `/thredds/iso/` |
+
+
+
 <table border="2">
   <tbody><tr>
     <th width="187">Name</th>
