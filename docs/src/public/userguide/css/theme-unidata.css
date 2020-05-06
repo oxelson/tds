@@ -101,6 +101,10 @@ li.sidebarTitle {
     margin-left: 5px;
 }
 
+pre {
+    font-size: 12px;
+}
+
 table {
     width:100%;
 }
