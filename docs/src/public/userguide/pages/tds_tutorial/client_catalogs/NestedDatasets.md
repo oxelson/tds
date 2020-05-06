@@ -1,12 +1,16 @@
 ---
 title: Nested Datasets
-last_updated: 2018-04-02
+last_updated: 2020-05-06
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: nested_datasets.html
 ---
 
-When you have many datasets to declare in each catalog, you can use _nested_ datasets:
+Client catalogs allow you to organize multiple datasets into hierarchical, logical structure.
+
+## Hierarchical Structure
+
+When you have multiple datasets to declare in each client catalog, you can use _nested_ datasets:
 
 ~~~xml
 <?xml version="1.0" ?>
@@ -21,10 +25,16 @@ When you have many datasets to declare in each catalog, you can use _nested_ dat
 </catalog>
 ~~~
 
-1. This declares a _collection_ dataset which acts as a container for the other datasets.
+Line-by-line explanation:
+
+1. Declares a _collection_ `dataset` which acts as a container for the other `dataset` elements.
    Note that it ends in a `>` instead of `/>`, and does not have a `urlPath` attribute.
-2. These are the datasets that directly point to data, called _direct_ datasets.
-3. This closes the collection `dataset` element on line 1.
+2. These `dataset` elements are used to directly point to data and are called _direct_ datasets.
+3. This closes the _collection_ `dataset` element on line 1.
+
+{%include note.html content="  
+All of the above _direct_ datasets are made available using the OPeNDAP protocol (`serviceName=\"odap\"`).
+" %} 
 
 You can add any level of nesting you want, e.g.:
 
@@ -49,3 +59,7 @@ You can add any level of nesting you want, e.g.:
   </dataset>
 </catalog>
 ~~~
+
+## Next Step
+
+Next, we'll look at how to add [additional descriptive information](client_catalog_metadata.html) about the datasets in our client catalog.  
