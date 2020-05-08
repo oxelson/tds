@@ -1,6 +1,6 @@
 ---
 title: Deploying the TDS 
-last_updated: 2020-04-30
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: deploying_the_tds.html
@@ -162,4 +162,4 @@ We recommend locating the TDS `$CONTENT_ROOT` directory somewhere separate from 
 
 ## Next Step
 
-Next, we'll examine the [Tomcat Manager Application](tomcat_manager_app.html) and grant ourselves access to it in preparation for accessing restricted parts of the TDS.
+Next, we will examine the [TDS `$CONTENT_ROOT` directory](tds_content_directory.html) in more depth.
