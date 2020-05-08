@@ -1,6 +1,6 @@
 ---
 title: Nested Datasets
-last_updated: 2020-05-06
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: nested_datasets.html
@@ -25,7 +25,7 @@ When you have multiple datasets to declare in each client catalog, you can use _
 </catalog>
 ~~~
 
-Line-by-line explanation:
+Line-by-line explanation of the above catalog:
 
 1. Declares a _collection_ `dataset` which acts as a container for the other `dataset` elements.
    Note that it ends in a `>` instead of `/>`, and does not have a `urlPath` attribute.

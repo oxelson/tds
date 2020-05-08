@@ -1,6 +1,6 @@
 ---
 title: Client Catalog Primer
-last_updated: 2020-05-06
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: basic_client_catalog.html
@@ -39,7 +39,7 @@ In addition to OPeNDAP, many [other data access services](services_ref.html) com
 
 ## Constructing An Access URL
 
-Using the client catalog directly above, here are the steps for client software to construct a dataset access URL:
+Using the example client catalog shown above, here are the steps for client software to construct a dataset access URL:
 
 1. Find the `service` referenced by the `dataset` (in this case, `odap`):
 

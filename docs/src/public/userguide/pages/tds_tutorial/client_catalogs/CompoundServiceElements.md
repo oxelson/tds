@@ -1,6 +1,6 @@
 ---
 title: Compound Service Elements
-last_updated: 2020-05-06
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: compound_service_elements.html
@@ -15,15 +15,11 @@ To create a _compound service_, give a `service` element the `serviceType` of `C
 For example, the following defines a compound service named `all` which contains two nested services for OPeNDAP and WCS:
 
 ~~~xml
-<service name="all" serviceType="Compound" base="" >
+<service name="all" serviceType="Compound">
   <service name="odap" serviceType="OPeNDAP" base="/thredds/dodsC/" />
   <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
 </service>
 ~~~
-
-{%include important.html content="
-The `base` attribute of the compound `service` element does not need to have a value, but it **does** need to be defined in order to pass catalog validation.  Just leave the value blank (`base=\"\"`).
-" %}
 
 ## Referencing A Compound Service 
 
@@ -85,4 +81,4 @@ Consult the [Data Services Reference](services_ref.html) for a complete listing 
 
 ## Next Step
 
-Next we need to address [xml validation](client_catalog_xml_validation.html) of our client catalogs.  
+To ensure our client catalogs are valid XML files, we'll next look how to [validate](client_catalog_xml_validation.html) these catalog files.  
