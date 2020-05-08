@@ -50,6 +50,10 @@ entries:
       url: /deploying_the_tds.html
       output: web, pdf
 
+    - title: TDS Content Directory
+      url: /tds_content_directory.html
+      output: web, pdf
+
     - title: Tomcat Manager Application
       url: /tomcat_manager_app.html
       output: web, pdf
@@ -77,6 +81,10 @@ entries:
       url: /compound_service_elements.html
       output: web, pdf
 
+    - title: Default TDS Configuration Catalog
+      url: /default_config_catalog.html
+      output: web, pdf
+
     - title: XML Validation
       url: /client_catalog_xml_validation.html
       output: web, pdf
@@ -88,14 +96,6 @@ entries:
   - title: TDS Configuration
     output: web, pdf
     folderitems:
-    - title: TDS Content Directory
-      url: /tds_content_directory.html
-      output: web, pdf
-
-    - title: Default TDS Configuration Catalog
-      url: /default_config_catalog.html
-      output: web, pdf
-
     - title: Basics of Configuration Catalogs
       url: /basic_config_catalog.html
       output: web, pdf
