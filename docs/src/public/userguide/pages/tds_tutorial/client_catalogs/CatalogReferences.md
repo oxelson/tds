@@ -1,6 +1,6 @@
 ---
 title: Catalog References
-last_updated: 2020-05-06
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: client_catalog_references.html
@@ -19,16 +19,18 @@ Here is an example of a master client catalog utilizing _catalog references_ to 
 <catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" name="Top Catalog"
          xmlns:xlink="http://www.w3.org/1999/xlink"> <!-- 1 -->
    <dataset name="Realtime data from IDD" ID="IDD">  <!-- 2 -->
-     <catalogRef xlink:href="idd/forecastModels.xml" xlink:title="Forecast Model Data" name=""/> <!-- 3 -->
-     <catalogRef xlink:href="idd/forecastProdsAndAna.xml" xlink:title="Forecast Products and Analyses" name=""/> <!-- 3 -->
-     <catalogRef xlink:href="idd/obsData.xml" xlink:title="Observation Data" name=""/> <!-- 3 -->
-     <catalogRef xlink:href="idd/radars.xml" xlink:title="Radar Data" name=""/> <!-- 3 -->
-     <catalogRef xlink:href="idd/satellite.xml" xlink:title="Satellite Data" name=""/> <!-- 3 -->
+     <catalogRef xlink:href="idd/forecastModels.xml" xlink:title="Forecast Model Data"/> <!-- 3 -->
+     <catalogRef xlink:href="idd/forecastProdsAndAna.xml" xlink:title="Forecast Products and Analyses"/> <!-- 3 -->
+     <catalogRef xlink:href="idd/obsData.xml" xlink:title="Observation Data"/> <!-- 3 -->
+     <catalogRef xlink:href="idd/radars.xml" xlink:title="Radar Data"/> <!-- 3 -->
+     <catalogRef xlink:href="idd/satellite.xml" xlink:title="Satellite Data"/> <!-- 3 -->
    </dataset>
 
   <catalogRef xlink:title="Far Away University catalog" xlink:href="http://www.farAway.edu/thredds/catalog.xml" />    <!-- 4 -->
 </catalog>
 ~~~
+
+Corresponding lines in the above catalog:
 
 1. We declare the `xlink` `namespace` in the master client `catalog` element.
 2. The _collection_ (or _container_) dataset logically contains the `catalogRefs`, which are thought of as nested datasets whose contents are the contents of the external catalog.
@@ -41,7 +43,7 @@ Here is an example of a master client catalog utilizing _catalog references_ to 
 
    <https://thredds.ucar.edu/thredds/catalog.xml>{:target="_blank"}
 
-   then the resolved URL of the first `catalogRef` will be:
+   then the resolved URL of the first `catalogRef` of `Forecast Model Data` will be:
 
    <https://thredds.ucar.edu/thredds/idd/forecastModels.xml>{:target="_blank"}
 

@@ -1,6 +1,6 @@
 ---
 title: Client Catalog Metadata
-last_updated: 2020-05-06
+last_updated: 2020-05-08
 sidebar: tdsTutorial_sidebar
 toc: false
 permalink: client_catalog_metadata.html
@@ -91,10 +91,12 @@ Rather than declare the same information on each dataset, use the `metadata` ele
 </dataset>
 ~~~
 
+Line-by-line explanation of the above catalog:
+
 1. The `metadata` element with `inherited="true"` implies that all the information inside the `metadata` element applies to the current dataset and all nested datasets.
-2. `serviceName`, `authority`, and `dataFormatType` are declared as elements.
-3. The `January Averages` and `Februsary Averages` _direct_ datasets use all the metadata values declared in the parent dataset.
-4. The `Gloabl Averages` dataset overrides the `authority` property specified in the `metadata` element, but uses the other `serviceName` and `dataFormatType` metadata values.
+2. `serviceName`, `authority`, and `dataFormatType` are declared as elements, and each include a value to be used by all nexted datasets.
+3. The `January Averages` and `February Averages` _direct_ datasets use all the metadata values declared in the parent dataset.
+4. The `Global Averages` dataset overrides the `authority` property specified in the `metadata` element, but uses the other `serviceName` and `dataFormatType` metadata values.
 
 ## When To Use A Metadata Element?
 
