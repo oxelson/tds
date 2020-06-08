@@ -13,11 +13,11 @@ They provide an access method (URL) and a _human-understandable_ name for each d
 Here's an example of a very simple catalog:
 
 ~~~xml
-<?xml version="1.0" ?>  <!-- 1 -->
-<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" > <!-- 2 -->
-  <service name="odap" serviceType="OPeNDAP" base="/thredds/dodsC/" /> <!-- 3 -->
-  <dataset name="SAGE III Ozone 2006-10-31" serviceName="odap" urlPath="sage/20061031.nc" ID="20061031.nc"/> <!-- 4 -->
-</catalog> <!-- 5 -->
+1   <?xml version="1.0" ?>  
+2   <catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" > 
+3     <service name="odap" serviceType="OPeNDAP" base="/thredds/dodsC/" /> 
+4     <dataset name="SAGE III Ozone 2006-10-31" serviceName="odap" urlPath="sage/20061031.nc" ID="20061031.nc"/> 
+5   </catalog> 
 ~~~
 
 with this line-by-line explanation:
