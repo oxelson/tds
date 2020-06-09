@@ -18,7 +18,7 @@ THREDDS catalogs are simple [XML](https://www.w3.org/XML/){:target='_blank'} fil
     
 ## Types Of Catalogs 
 
-THREDDS Catalogs are _versatile_, meaning they may have multiple functions.   As such, they can be referred to as either **client** catalogs or **configuration** catalogs, depending on what XML elements they contain:  
+THREDDS Catalogs are *versatile*, meaning they may have multiple functions.   As such, they can be referred to as either **client** catalogs or **configuration** catalogs, depending on what XML elements they contain:  
 
 ### Client Catalogs
 
