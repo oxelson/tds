@@ -31,7 +31,7 @@ Move into the `$TOMCAT_HOME/conf` directory and examine the `server.xml` file (`
 
 
 |-----------------|-----------|-------------------------------|
-| Tag Name  | Instances | How it relates to the TDS     |
+| Tag Name        | Instances | How it relates to the TDS     |
 |:----------------|:---------:|:------------------------------|
 | [`<Server>`](http://tomcat.apache.org/tomcat-8.5-doc/config/server.html "The Server element represents the entire Catalina servlet container as a whole. It is the single outermost element in server.xml"){:target="_blank"} | 1...1 | Not modified unless you want to change the port number Tomcat listens for a `SHUTDOWN` command. (Enabled by default.) |
 | &nbsp;&nbsp; [`<GlobalNamingResources>`](http://tomcat.apache.org/tomcat-8.5-doc/config/globalresources.html "The GlobalNamingResources element defines the global Java Naming and Directory Interface (JNDI) resources for the Server."){:target="_blank"} | 0...\* | Needed to contain the `UserDatabase` that corresponds to the `UserDatabaseRealm` used to authenticate users. (Enabled by default.) |

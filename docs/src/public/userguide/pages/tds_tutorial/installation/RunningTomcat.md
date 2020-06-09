@@ -40,7 +40,7 @@ The following example shows stopping/starting Tomcat on a linux system, as the `
 
    Open a new browser window/tab and go to [http://localhost:8080/](http://localhost:8080/){:target="_blank"} to verify Tomcat is running:
 
-   {% include image.html file="tds/tutorial/getting_started/congratulations.png" alt="Tomcat Default Home Page" caption="If you see this page, Tomcat is running!" %}
+   {% include image.html file="tds/tutorial/installation/congratulations.png" alt="Tomcat Default Home Page" caption="If you see this page, Tomcat is running!" %}
 
 
 3. See if you can shutdown Tomcat.

@@ -104,7 +104,7 @@ This section assumes you have successfully installed the JDK and Tomcat Servlet 
 
    Go to [http://localhost:8080/thredds/](http://localhost:8080/thredds/){:target="_blank"} in your browser to verify the TDS has been deployed:
 
-   {% include image.html file="tds/tutorial/getting_started/default_cat.png" alt="THREDDS Distribution Catalog" caption="THREDDS Distribution Catalog" %}
+   {% include image.html file="tds/tutorial/installation/default_cat.png" alt="THREDDS Distribution Catalog" caption="THREDDS Distribution Catalog" %}
 
 
     {%include warning.html content="

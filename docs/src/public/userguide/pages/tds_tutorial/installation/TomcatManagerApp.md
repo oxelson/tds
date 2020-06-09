@@ -29,7 +29,7 @@ Attempt to access the Tomcat `manager` application in your browser by visiting [
 
 You will be prompted to login via BASIC authentication, which will end in failure since we do not yet have permission to access the `manager` application:
 
-{%include image.html file="tds/tutorial/getting_started/manager401.png" alt="Manager app with 401 response code" caption="" %}
+{%include image.html file="tds/tutorial/installation/manager401.png" alt="Manager app with 401 response code" caption="" %}
 
 {%include question.html content="
 Based on what we know about Tomcat configuration, which file in the `$TOMCAT_HOME/conf` directory should we edit to grant ourselves access to the `manager` application?
@@ -201,7 +201,7 @@ To gain access to restricted parts of the TDS, you will perform the same steps y
    
    Attempt to access the manager application again [http://localhost:8080/manager/html/](http://localhost:8080/manager/html/){:target="_blank"}, this time logging in using the user name and password specified in `tomcat-users.xml`:
 
-   {% include image.html file="tds/tutorial/getting_started/manager.png" alt="Tomcat manager application" caption="" %}
+   {% include image.html file="tds/tutorial/installation/manager.png" alt="Tomcat manager application" caption="" %}
 
    Voil&aacute;! You should have access to the manager application.
 
@@ -224,7 +224,7 @@ Take the Manager application for a test-drive to undeploy and re-deploy the TDS.
    Find the TDS in the list of web application on the _Applications_ page.
    `Stop` and then `Undeploy` the TDS:
 
-   {% include image.html file="tds/tutorial/getting_started/undeploy.png" alt="Undeploy the TDS" caption="" %}
+   {% include image.html file="tds/tutorial/installation/undeploy.png" alt="Undeploy the TDS" caption="" %}
 
    List the contents of the `$TOMCAT_HOME/webapps` directory to verify that both `thredds.war` and the unpacked `thredds/` directory have been removed:
 
@@ -243,7 +243,7 @@ Take the Manager application for a test-drive to undeploy and re-deploy the TDS.
 
    Upload the TDS WAR file using the _Deploy_ section of the Manager application:
 
-   {% include image.html file="tds/tutorial/getting_started/deploy.png" alt="Deploy the TDS" caption="" %}
+   {% include image.html file="tds/tutorial/installation/deploy.png" alt="Deploy the TDS" caption="" %}
 
    Confirm the deployment went as planned by accessing the TDS using your browser:[http://localhost:8080/thredds/](http://localhost:8080/thredds/){:target="_blank"} 
 
