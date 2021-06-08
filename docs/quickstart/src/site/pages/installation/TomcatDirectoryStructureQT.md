@@ -1,9 +1,9 @@
 ---
-title: Tomcat Directory Structure - Quick Tour
+title: Tomcat Directory Structure
 last_updated: 2020-08-23
 sidebar: quickstart_sidebar
 toc: false
-permalink: tomcat_dir_structure_qt.html
+permalink: tomcat_dir_structure.html
 ---
 
 This section examines the directory structure and files found in the Tomcat Servlet Container installation and how they relate to the TDS.
