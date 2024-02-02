@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+ <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+   <suppress>
+     <notes><![CDATA[
+       file name: thredds-5.5-SNAPSHOT.war: jackson-databind-2.15.2.jar
+       ]]></notes>
+     <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-databind@.*$</packageUrl>
+     <cpe>cpe:/a:fasterxml:jackson-databind</cpe>
+     <cpe>cpe:/a:fasterxml:jackson-modules-java8</cpe>
+  </suppress>
   <suppress>
     <notes><![CDATA[
       file name example: spring-security-core-4.2.7.RELEASE.jar, spring-security-cweb-4.2.7.RELEASE.jar
